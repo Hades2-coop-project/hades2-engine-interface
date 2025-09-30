@@ -10,6 +10,7 @@
 namespace sgg {
 class UnitManager {
   public:
+    static Unit *Get(int id) { return ((Unit * (__fastcall *)(int)) HookTable::Instance().UnitManager_Get)(id); }
     static void Add(Unit *unit, bool needsInitialization) {
         ((void(__fastcall *)(Unit *, bool))HookTable::Instance().UnitManager_Add)(unit, needsInitialization);
     }

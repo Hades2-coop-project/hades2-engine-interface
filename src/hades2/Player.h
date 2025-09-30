@@ -13,7 +13,7 @@ class PlayerUnit;
 
 class Player {
   public:
-      static void internal_constructor(void* self, uint64_t index, uint8_t *controllerIndex) {
+    static void internal_constructor(void *self, uint64_t index, uint8_t *controllerIndex) {
         ((void(__fastcall *)(void *, uint64_t, uint8_t *))HookTable::Instance().Player_Player)(self, index,
                                                                                                controllerIndex);
     }
@@ -34,11 +34,11 @@ class Player {
     uint64_t mIndex;
 
     Vectormath::Vector2 mCursorLocation;
-    PlayerUnit *pActiveUnit; // sgg::PlayerUnit
-    void *pAI;                    // sgg::PlayerAI
+    PlayerUnit *pActiveUnit;
+    void *pAI; // sgg::PlayerAI
 
     uint8_t mUseTarget[0x10];
-    uint64_t mPrevUseTargetId;
+    uint32_t mPrevUseTargetId;
 
     uint8_t pad2[4];
 
@@ -47,14 +47,12 @@ class Player {
     float mRightRumbleFraction;
     float mRumbleEndTime;
 
-    uint8_t mAsString[0x18];
+    uint8_t pad3[4];
 
-    uint8_t mRumbleRequestsToDelete;
-    uint8_t mRumbleRequests;
-    uint8_t mTriggerRequests[2];
-    uint8_t pad3[56]; // im lazy
+    uint8_t mRumbleRequestsToDelete[0x18]; // eastl::vector
+    uint8_t mRumbleRequests[0x18];         // eastl::vector
+    uint8_t mTriggerRequests[0x10];        // sgg::Player::TriggerRequest[2]
 };
-
 static_assert(sizeof(Player) == 0xC0, "Incorrect sgg::Player size");
 
 } // namespace sgg

@@ -5,12 +5,11 @@
 
 #pragma once
 
-#include "../HookSystem.h"
-#include "../HookTable.h"
-#include "Player.h"
-#include "InputHandler.h"
-#include "allocator.h"
 #include "../../libs/EASTL-forge1.51/vector.h"
+#include "../HookTable.h"
+#include "InputHandler.h"
+#include "Player.h"
+#include "allocator.h"
 
 namespace sgg {
 
@@ -32,8 +31,10 @@ class PlayerManager {
             this, player, index);
     }
 
+    sgg::Player *GetPlayer(uint64_t index) const noexcept { return m_palyers[index]; }
+
   private:
-    eastl::vector<sgg::InputHandler*, eastl::allocator_forge> m_inputMethods;
+    eastl::vector<sgg::InputHandler *, eastl::allocator_forge> m_inputMethods;
     eastl::vector<sgg::Player *, eastl::allocator_forge> m_palyers;
 };
 static_assert(sizeof(PlayerManager) == 0x30, "Incorrect PlayerManager size");

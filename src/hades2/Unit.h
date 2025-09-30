@@ -14,6 +14,7 @@ class Player;
 __declspec(align(16)) class Unit : public Thing {
 
 public:
+    void Delete() { ((void(__fastcall *)(void *))HookTable::Instance().Unit_Delete)(this); }
     UnitData *GetData() const noexcept { return pData; };
 
     void SetPlayer(Player *player) { pPlayer = player; };
@@ -30,7 +31,7 @@ private:
     bool padding0;
 
     UnitData *pData;
-    uint8_t pad[480];
+    uint8_t pad[432];
 };
 
 static_assert(sizeof(Unit) == 0x810, "Incorrect sgg::Unit size");

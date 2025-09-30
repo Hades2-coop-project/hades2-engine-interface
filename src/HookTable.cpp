@@ -35,6 +35,8 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
     Interact_Use = GetSymbolAddress("sgg::Interact::Use");
 
     World_GetActiveThing = GetSymbolAddress("sgg::World::GetActiveThing");
+    World_CreateThing = GetSymbolAddress("sgg::World::CreateThing");
+    world = GetSymbolAddress("sgg::world");
 
     GameDataManager_GetUnitData = GetSymbolAddress("sgg::GameDataManager::GetUnitData");
 }

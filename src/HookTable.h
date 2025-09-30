@@ -34,6 +34,8 @@ struct HookTable {
     uintptr_t Unit_Delete;
     uintptr_t Interact_Use;
     uintptr_t World_GetActiveThing;
+    uintptr_t World_CreateThing;
+    uintptr_t world;
 
     uintptr_t GameDataManager_GetUnitData;
 };
