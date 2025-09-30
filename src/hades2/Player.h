@@ -26,11 +26,10 @@ class Player {
 
   private:
     bool mWasAnyInputGiven;
-    bool mAllowInput;
     bool mIsConnected;
     bool mPauseRequested;
     uint8_t mControllerIndex;
-    uint8_t pad1[3];
+    uint8_t pad1[4];
 
     uint64_t mIndex;
 
@@ -56,6 +55,6 @@ class Player {
     uint8_t pad3[56]; // im lazy
 };
 
-static_assert(sizeof(Player) == 0xD8, "Incorrect Player size");
+static_assert(sizeof(Player) == 0xC0, "Incorrect sgg::Player size");
 
 } // namespace sgg

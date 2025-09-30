@@ -23,5 +23,5 @@ __declspec(align(16)) class PlayerUnit : public Unit {
 
     uint8_t pad[0x10];
 };
-static_assert(sizeof(PlayerUnit) == 0x850, "Incorrect sgg::PlayerUnit size");
+static_assert(sizeof(PlayerUnit) == 0x820, "Incorrect sgg::PlayerUnit size");
 } // namespace sgg

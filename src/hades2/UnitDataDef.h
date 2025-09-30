@@ -7,7 +7,7 @@
 
 namespace sgg {
 class UnitDataDef {
-    uint8_t pad[0xB0];
+    uint8_t pad[0x88];
 };
-static_assert(sizeof(UnitDataDef) == 0xB0, "Incorrect sgg::UnitDataDef size");
+static_assert(sizeof(UnitDataDef) == 0x88, "Incorrect sgg::UnitDataDef size");
 } // namespace sgg

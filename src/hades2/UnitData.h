@@ -17,5 +17,5 @@ class UnitData : public GameData {
     UnitDataDef mDef;
 };
 
-static_assert(sizeof(UnitData) == 0xC8, "Incorrect sgg::UnitData size");
+static_assert(sizeof(UnitData) == 0xA0, "Incorrect sgg::UnitData size");
 } // namespace sgg
