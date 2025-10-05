@@ -15,8 +15,9 @@ void HookTable::Init(const HookTable& parent) {
 	g_HookTable = parent;
 }
 
+#ifdef HADES2_MOD_LOADER
 void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
-    luaState = GetSymbolAddress("sgg::ScriptManager::LUA_INTERFACE");
+    luaState = GetSymbolAddress("sgg::ScriptManager::LuaInterface");
     lua_pcallk = GetSymbolAddress("lua_pcallk");
     luaL_loadbufferx = GetSymbolAddress("luaL_loadbufferx");
     HandleAssert = GetSymbolAddress("sgg__HandleAssert");
@@ -40,3 +41,4 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
 
     GameDataManager_GetUnitData = GetSymbolAddress("sgg::GameDataManager::GetUnitData");
 }
+#endif //  HADES2_MOD_LOADER

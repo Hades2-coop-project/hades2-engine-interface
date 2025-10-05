@@ -8,11 +8,13 @@
 #include <cstdint>
 
 struct HookTable {
-    static HookTable& Instance();
-	void Init(const HookTable &parent);
+    static HookTable &Instance();
+    void Init(const HookTable &parent);
 
-    using GetSymbolAddress_t = uint64_t(__cdecl*)(const char* symbolName);
+#ifdef HADES2_MOD_LOADER
+    using GetSymbolAddress_t = uint64_t(__cdecl *)(const char *symbolName);
     void Init(HookTable::GetSymbolAddress_t GetSymbolAddress);
+#endif //  HADES2_MOD_LOADER
 
     uintptr_t luaState;
     uintptr_t lua_pcallk;
