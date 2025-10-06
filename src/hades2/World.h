@@ -18,10 +18,11 @@ class World {
     }
 
     Obstacle * CreateThing(MapThing *mapThing, bool luaCallback, bool mapThingLuaCallback) {
-        return ((Obstacle * (__fastcall *)(void *, bool, bool)) HookTable::Instance().World_CreateThing)(this, luaCallback, mapThingLuaCallback);
+        return ((Obstacle * (__fastcall *)(void *, MapThing*, bool, bool)) HookTable::Instance().World_CreateThing)(
+            this, mapThing, luaCallback, mapThingLuaCallback);
     }
 
 
-    static World *Instance() { return ((World * (__fastcall *)()) HookTable::Instance().world)(); }
+    static World *Instance() { return reinterpret_cast<World*>(HookTable::Instance().world); }
 };
 } // namespace SGG

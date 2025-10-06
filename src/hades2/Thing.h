@@ -13,7 +13,7 @@ namespace sgg {
 __declspec(align(8)) class Thing : public IRenderComponent {
   public:
     MapThing *GetMapThing() const noexcept {
-        return *reinterpret_cast<MapThing **>(reinterpret_cast<uint64_t>(this) + 0x510);
+        return *reinterpret_cast<MapThing **>(reinterpret_cast<uint64_t>(this) + 0x520);
     };
 
     void SetVisible(bool visible) noexcept { mVisible = visible; };
