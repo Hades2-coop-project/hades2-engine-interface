@@ -40,4 +40,6 @@ struct HookTable {
     uintptr_t world;
 
     uintptr_t GameDataManager_GetUnitData;
+
+    uintptr_t EntityManager_Create;
 };
