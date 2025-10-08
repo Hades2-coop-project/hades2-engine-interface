@@ -40,7 +40,7 @@ __declspec(align(8)) class Thing : public IRenderComponent {
     Vectormath::Vector2 mLocation;
     Vectormath::Vector2 mSpawnLocation;
 
-    uint8_t __pad_to_finish[1480];
+    uint8_t __pad_to_finish[1480 + 0x10];
 };
-static_assert(sizeof(Thing) == 0x640, "Incorrect sgg::Thing size");
+static_assert(sizeof(Thing) == 0x650, "Incorrect sgg::Thing size");
 } // namespace sgg

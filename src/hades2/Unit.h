@@ -34,5 +34,5 @@ private:
     uint8_t pad[432];
 };
 
-static_assert(sizeof(Unit) == 0x810, "Incorrect sgg::Unit size");
+static_assert(sizeof(Unit) == 0x820, "Incorrect sgg::Unit size");
 } // namespace sgg

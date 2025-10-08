@@ -21,7 +21,7 @@ __declspec(align(16)) class PlayerUnit : public Unit {
              .PlayerUnit_PlayerUnit)(pos, entity, data, mapThing, location);
     };
 
-    uint8_t pad[0x10];
+    void *pUnitInput; // sgg::PlayerUnitInput
 };
-static_assert(sizeof(PlayerUnit) == 0x820, "Incorrect sgg::PlayerUnit size");
+static_assert(sizeof(PlayerUnit) == 0x830, "Incorrect sgg::PlayerUnit size");
 } // namespace sgg

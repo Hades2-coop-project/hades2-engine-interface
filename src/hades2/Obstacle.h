@@ -14,5 +14,5 @@ __declspec(align(16)) class Obstacle : public Thing {
 
     uint8_t pad[368];
 };
-static_assert(sizeof(Obstacle) == 0x7B0, "Incorrect sgg::Obstacle size");
+static_assert(sizeof(Obstacle) == 0x7C0, "Incorrect sgg::Obstacle size");
 } // namespace sgg
