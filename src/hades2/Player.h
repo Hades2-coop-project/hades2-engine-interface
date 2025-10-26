@@ -24,6 +24,8 @@ class Player {
     PlayerUnit *GetUnit() { return pActiveUnit; };
     void SetUnit(PlayerUnit *unit) { pActiveUnit = unit; };
 
+    void SetIndex(uint64_t index) { mIndex = index; };
+
   private:
     bool mWasAnyInputGiven;
     bool mIsConnected;
