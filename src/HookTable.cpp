@@ -42,5 +42,6 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
     GameDataManager_GetUnitData = GetSymbolAddress("sgg::GameDataManager::GetUnitData");
     EntityManager_Create = GetSymbolAddress("sgg::EntityManager::Create");
     HashGuid_StringIntern = GetSymbolAddress("?StringIntern@HashGuid@sgg@@SAIPEBD_K@Z");
+    GameDataManager_GetAnimationData = GetSymbolAddress("sgg::GameDataManager::GetAnimationData");
 }
 #endif //  HADES2_MOD_LOADER

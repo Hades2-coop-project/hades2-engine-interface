@@ -5,15 +5,15 @@
 
 #pragma once
 
+#include "Rtii.h"
 #include "Entity.h"
 
 namespace sgg {
-class IRenderComponent {
+class IRenderComponent: public Rtii {
   public:
     sgg::Entity GetEntity() const noexcept { return mEntity; };
 
 private:
-    uint8_t pad_base[10]; // sgg::Rtti
     uint64_t mSortScore;  // sgg::SortScore
     uint8_t mSortMode; // sgg::SortMode
     uint32_t mSecondarySortKey;

@@ -24,6 +24,7 @@ class Player {
     PlayerUnit *GetUnit() { return pActiveUnit; };
     void SetUnit(PlayerUnit *unit) { pActiveUnit = unit; };
 
+    uint64_t GetIndex() const noexcept { return mIndex; };
     void SetIndex(uint64_t index) { mIndex = index; };
 
   private:

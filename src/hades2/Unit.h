@@ -18,6 +18,7 @@ public:
     UnitData *GetData() const noexcept { return pData; };
 
     void SetPlayer(Player *player) { pPlayer = player; };
+    Player *GetPlayer() const noexcept { return pPlayer; };
 
 private:
     bool mAllowDodge;
