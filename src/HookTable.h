@@ -42,4 +42,5 @@ struct HookTable {
     uintptr_t GameDataManager_GetUnitData;
 
     uintptr_t EntityManager_Create;
+    uintptr_t HashGuid_StringIntern;
 };
