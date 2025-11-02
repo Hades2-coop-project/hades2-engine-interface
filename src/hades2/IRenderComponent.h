@@ -5,11 +5,11 @@
 
 #pragma once
 
-#include "Rtii.h"
+#include "Rtti.h"
 #include "Entity.h"
 
 namespace sgg {
-class IRenderComponent: public Rtii {
+class IRenderComponent: public Rtti {
   public:
     sgg::Entity GetEntity() const noexcept { return mEntity; };
 

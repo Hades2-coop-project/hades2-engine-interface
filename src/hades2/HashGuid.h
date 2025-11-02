@@ -11,9 +11,12 @@ class HashGuid {
   public:
     HashGuid(uint32_t id) : mId(id) {};
     uint32_t GetId() const noexcept { return mId; };
+    const char *c_str() const {
+        return ((const char* (__fastcall *)(const HashGuid*))HookTable::Instance().HashGuid_c_str)(this);
+    }
 
-    static HashGuid StringIntern(const char *str, size_t size) {
-        return ((HashGuid(__fastcall *)(const char*, size_t))HookTable::Instance().HashGuid_StringIntern)(
+    static uint64_t StringIntern(const char *str, uint64_t size) {
+        return ((uint64_t(__fastcall *)(const char *, uint64_t))HookTable::Instance().HashGuid_StringIntern)(
             str, size);
     }
 

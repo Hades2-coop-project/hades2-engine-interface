@@ -8,7 +8,7 @@
 #include <cstdint>
 
 namespace sgg {
-enum class RtiiType : uint32_t {
+enum class RttiType : uint32_t {
     Component = 0x1,
     Weapon = 0x2,
     GameEvent = 0x4,
@@ -41,13 +41,13 @@ enum class RtiiType : uint32_t {
     UndoRedoRecord = 0x48,
 };
 
-class Rtii {
+class Rtti {
   public:
-    bool IsPlayerUnit() const noexcept { return mType == RtiiType::PlayerUnit; }
+    bool IsPlayerUnit() const noexcept { return mType == RttiType::PlayerUnit; }
 
   private:
     void *vftable;
-    RtiiType mType;
+    RttiType mType;
 };
-static_assert(sizeof(Rtii) == 0x10, "Incorrect sgg::Rtii size");
+static_assert(sizeof(Rtti) == 0x10, "Incorrect sgg::Rtti size");
 } // namespace sgg
