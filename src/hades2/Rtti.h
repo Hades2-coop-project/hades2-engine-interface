@@ -44,6 +44,9 @@ enum class RttiType : uint32_t {
 class Rtti {
   public:
     bool IsPlayerUnit() const noexcept { return mType == RttiType::PlayerUnit; }
+    bool IsProjectile() const noexcept { return (uint32_t)mType & (uint32_t)RttiType::Projectile; }
+    bool IsLobProjectile() const noexcept { return mType == RttiType::LobProjectile; }
+    bool IsObstacle() const noexcept { return mType == RttiType::Obstacle; }
 
   private:
     void *vftable;
