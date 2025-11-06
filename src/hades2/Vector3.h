@@ -9,10 +9,16 @@ namespace Vectormath {
 
 class Vector3 {
   public:
-    Vector2() : mX{}, mY{}, mZ{} {};
-    Vector2(float x, float y, float z) : mX{x}, mY{y}, mZ{z} {};
+    Vector3() : mX{}, mY{}, mZ{} {};
+    Vector3(float x, float y, float z) : mX{x}, mY{y}, mZ{z} {};
 
-    float mX, mY;
+    union {
+        struct {
+            float mX, mY, mZ;
+        };
+        __m128 mVec128;
+    };
 };
+static_assert(sizeof(Vector3) == 0x10, "Invalid Vectormath::Vector3 size");
 
 } // namespace Vectormath

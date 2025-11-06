@@ -6,10 +6,30 @@
 #pragma once
 
 #include "Vector2.h"
+#include "Vector3.h"
 #include "MapThing.h"
 #include "IRenderComponent.h"
+#include "IRectangle.h"
+#include "EntityLinkedObject.h"
+#include "LuaTable.h"
 
 namespace sgg {
+class ThingData;
+class BodyComponent;
+class LifeComponent;
+class PhysicsComponent;
+class VacuumComponent;
+class MagnetismComponent;
+class LightOccluderComponent;
+class TranslateComponent;
+class PlayerNearbyComponent;
+class FlashComponent;
+class ShakeComponent;
+class TextComponent;
+class SpeechComponent;
+class Interact;
+class Animation;
+
 __declspec(align(8)) class Thing : public IRenderComponent {
   public:
     MapThing *GetMapThing() const noexcept {
@@ -21,6 +41,7 @@ __declspec(align(8)) class Thing : public IRenderComponent {
     Vectormath::Vector2 GetLocation() const noexcept { return mLocation; };
     uint32_t GetId() const noexcept { return mId; };
     HashGuid GetName() const noexcept { return mName; };
+    LuaTable &GetLuaTable() noexcept { return mAttachedLua; };
 
   private:
     bool mVisible;
@@ -39,8 +60,27 @@ __declspec(align(8)) class Thing : public IRenderComponent {
     float mSpawnTime;
     Vectormath::Vector2 mLocation;
     Vectormath::Vector2 mSpawnLocation;
+    IRectangle mRectangle;
+    Vectormath::Vector3 mDirection;
+    ThingData *pThingData;
+    BodyComponent *pBody;
+    LifeComponent *pLife;
+    PhysicsComponent *pPhysics;
+    VacuumComponent *pVacuum;
+    MagnetismComponent *pMagnetism;
+    LightOccluderComponent *pOccluder;
+    TranslateComponent *pTranslate;
+    PlayerNearbyComponent *pPlayerNearby;
+    FlashComponent *pFlash;
+    ShakeComponent *pShake;
+    TextComponent *pText;
+    SpeechComponent *pSpeech;
+    Interact *pInteraction;
+    Animation *pAnim;
+    EntityLinkedObject<sgg::Thing> mAttachedTo;
+    LuaTable mAttachedLua;
 
-    uint8_t __pad_to_finish[1480 + 0x10];
+    uint8_t __pad_to_finish[1296];
 };
 static_assert(sizeof(Thing) == 0x650, "Incorrect sgg::Thing size");
 } // namespace sgg

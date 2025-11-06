@@ -5,8 +5,9 @@
 
 #pragma once
 
-namespace sgg {
 class lua_State;
+
+namespace sgg {
 
 // The class is not used in sgg namespace itself, but it's part of the engine interface.
 class LuaTable {

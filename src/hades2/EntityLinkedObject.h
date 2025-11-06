@@ -14,5 +14,5 @@ template <typename T> class EntityLinkedObject {
     Entity mEntity;
 };
 
-static_assert(sizeof(EntityLinkedObject<void>) == 0x8 + sizeof(Entity), "Incorrect sgg::EntityLinkedObject size");
+static_assert(sizeof(EntityLinkedObject<void>) == 0x10, "Incorrect sgg::EntityLinkedObject size");
 } // namespace sgg
