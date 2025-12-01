@@ -42,6 +42,8 @@ __declspec(align(8)) class Thing : public IRenderComponent {
     uint32_t GetId() const noexcept { return mId; };
     HashGuid GetName() const noexcept { return mName; };
     LuaTable &GetLuaTable() noexcept { return mAttachedLua; };
+    Interact *GetInteraction() const noexcept { return pInteraction; };
+
 
   private:
     bool mVisible;
