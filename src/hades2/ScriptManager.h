@@ -6,7 +6,8 @@
 #pragma once
 
 #include "HookTable.h"
-#include <lua.hpp>
+
+class lua_State;
 
 namespace sgg {
 

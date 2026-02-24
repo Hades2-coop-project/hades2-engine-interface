@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "../../libs/EASTL-forge1.51/vector.h"
+#include <EASTL-forge1.51/vector.h>
 #include "../HookTable.h"
 #include "InputHandler.h"
 #include "Player.h"

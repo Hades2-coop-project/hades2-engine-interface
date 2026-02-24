@@ -10,11 +10,11 @@ class lua_State;
 namespace sgg {
 
 // The class is not used in sgg namespace itself, but it's part of the engine interface.
-class LuaTable {
+class LuaFunction {
   public:
-    lua_State *state;
-    int ref;
+    lua_State *mLuaState;
+    int mTableRef;
 };
 
-static_assert(sizeof(LuaTable) == 0x10, "Incorrect sgg::LuaTable size");
+static_assert(sizeof(LuaFunction) == 0x10, "Incorrect sgg::LuaFunction size");
 } // namespace sgg

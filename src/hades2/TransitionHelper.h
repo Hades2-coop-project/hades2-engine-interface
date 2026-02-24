@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <../libs/EASTL-forge1.51/functional.h>
+#include "../EASTL-forge1.51/functional.h"
 
 namespace sgg {
 template <typename T> class TransitionHelper {

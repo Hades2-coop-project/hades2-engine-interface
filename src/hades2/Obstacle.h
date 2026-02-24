@@ -13,7 +13,7 @@
 #include "ObstacleData.h"
 #include "Handle.h"
 #include "TransitionHelper.h"
-#include "../libs/EASTL-forge1.51/vector.h"
+#include "../EASTL-forge1.51/vector.h"
 
 namespace sgg {
 class Animation;

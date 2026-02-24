@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <xmmintrin.h>
+
 namespace Vectormath {
 
 class Vector3 {

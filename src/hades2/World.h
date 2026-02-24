@@ -25,4 +25,4 @@ class World {
 
     static World *Instance() { return *reinterpret_cast<World**>(HookTable::Instance().world); }
 };
-} // namespace SGG
+} // namespace sgg

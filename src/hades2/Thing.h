@@ -59,7 +59,7 @@ __declspec(align(8)) class Thing : public IRenderComponent {
     float mTallness;
     float mTimeModifierFraction;
     float mElapsedTimeMultiplier;
-    float mSpawnTime;
+    long double mSpawnTime;
     Vectormath::Vector2 mLocation;
     Vectormath::Vector2 mSpawnLocation;
     IRectangle mRectangle;

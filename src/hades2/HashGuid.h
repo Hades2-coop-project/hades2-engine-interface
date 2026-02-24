@@ -15,7 +15,7 @@ class HashGuid {
         return ((const char* (__fastcall *)(const HashGuid*))HookTable::Instance().HashGuid_c_str)(this);
     }
 
-    static uint64_t StringIntern(const char *str, uint64_t size) {
+    static uint64_t StringIntern(const char *str, uint64_t size = 0) {
         return ((uint64_t(__fastcall *)(const char *, uint64_t))HookTable::Instance().HashGuid_StringIntern)(
             str, size);
     }
