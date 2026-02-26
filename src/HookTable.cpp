@@ -60,14 +60,14 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
 
     MainMenuScreen_MainMenuScreen = GetSymbolAddress("sgg::MainMenuScreen::MainMenuScreen");
     MainMenuScreen_OpenProfiles = GetSymbolAddress("sgg::MainMenuScreen::OpenProfiles");
-    GUIComponentButton_GUIComponentButton = GetSymbolAddress("sgg::GUIComponentButton::GUIComponentButton");
+    GUIComponentButton_GUIComponentButton_MenuScreen = GetSymbolAddress("??0GUIComponentButton@sgg@@QEAA@PEAVMenuScreen@1@@Z");
     GUIComponentButton_UseDefaultText = GetSymbolAddress("?UseDefaultText@GUIComponentButton@sgg@@UEAAXXZ");
 
     GUIComponentTextBox_GUIComponentTextBox =
-        GetSymbolAddress("??0GUIComponentTextBox@sgg@@QEAA@AEBVVector2@Vectormath@@@Z");
+        GetSymbolAddress("??0GUIComponentTextBox@sgg@@QEAA@VVector2@Vectormath@@@Z");
 
     vector8x8_push = GetSymbolAddress(
-        "eastl::stack<sgg::IUndoRedoRecord *,eastl::vector<sgg::IUndoRedoRecord *,eastl::allocator_forge> >::push");
+        "?push_back@?$vector@PEAUPipeline@@Vallocator_forge@eastl@@@eastl@@QEAAXAEBQEAUPipeline@@@Z");
 
     GUIComponentReflectionHelper_ReflectComponent_GUIComponentButton =
         GetSymbolAddress("sgg::GUIComponentReflectionHelper::ReflectComponent<sgg::GUIComponentButton *>");
