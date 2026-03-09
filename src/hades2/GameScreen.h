@@ -37,6 +37,7 @@ class GameScreen {
     ScreenManager *GetScreenManager() const noexcept { return mScreenManager; }
 
     void SetLoverInputBlock(bool status) noexcept { mBlockLowerInput = status; }
+    void SetAllowDuplicates(bool allowed) noexcept { mAllowDuplicates = allowed; }
 
 protected:
     bool mTransitionFinished;
