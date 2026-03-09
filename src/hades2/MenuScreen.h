@@ -30,19 +30,6 @@ class InputHandler;
 
 class MenuScreen : public GameScreen, public IGUIComponentContainer {
   public:
-    virtual void OnExit() = 0;
-    virtual void LoadContent() = 0;
-    virtual void UnloadContent() = 0;
-    virtual void Update(float deltaTime,
-                        const eastl::vector<InputHandler *, eastl::allocator_forge> *inputHandlers) = 0;
-    virtual bool HandleInput(InputHandler *input, float deltaTime) = 0;
-    virtual void HandleNoInput() = 0;
-    virtual void Draw(float deltaTime) = 0;
-    virtual void ExitScreen() = 0;
-    virtual void Clear() = 0;
-    virtual void Init(ScreenManager *manager) = 0;
-    virtual ScreenType GetType() = 0;
-    virtual ~MenuScreen() = 0;
     virtual bool FreeFormSelect(InputHandler *input, float deltaTime) = 0;
     virtual void OnCancel() = 0;
     virtual bool WasClickPressed(InputHandler *input) = 0;

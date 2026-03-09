@@ -6,11 +6,12 @@
 #pragma once
 
 namespace sgg {
+class GUIComponent;
+
 class IGUIComponentContainer {
   public:
-
-  private:
-    void *vtbl;
+    virtual GUIComponent GetComponent(const eastl::basic_string<char, eastl::allocator_forge> *) = 0;
+    virtual ~IGUIComponentContainer() = 0;
 };
 static_assert(sizeof(IGUIComponentContainer) == 0x8, "Incorrect sgg::IGUIComponentContainer size");
 } // namespace sgg
