@@ -5,11 +5,13 @@
 
 #pragma once
 
-namespace sgg {
+namespace sgg::fs {
+class IFileSystem;
+
 struct ResourceDirectoryInfo {
-    void *pIO;
+    IFileSystem *pIO;
     char path[512];
     bool bundled;
 };
-static_assert(sizeof(ResourceDirectoryInfo) == 0x210, "Incorrect sgg::ResourceDirectoryInfo size");
+static_assert(sizeof(ResourceDirectoryInfo) == 0x210, "Incorrect sgg::fs::ResourceDirectoryInfo size");
 } // namespace sgg

@@ -77,5 +77,8 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
     ScreenManager_AddScreen_screen = GetSymbolAddress("?AddScreen@ScreenManager@sgg@@QEAAXPEAVGameScreen@2@@Z");
 
     ScreenData_ReadXml = GetSymbolAddress("sgg::ScreenData::ReadXml");
+
+    fsSetPathForResourceDir = GetSymbolAddress("fsSetPathForResourceDir");
+    gResourceDirectories = GetSymbolAddress("gResourceDirectories");
 }
 #endif //  HADES2_MOD_LOADER

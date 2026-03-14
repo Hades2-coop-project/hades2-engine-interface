@@ -76,4 +76,7 @@ struct HookTable {
     uintptr_t ScreenManager_AddScreen_screen;
 
     uintptr_t ScreenData_ReadXml;
+
+    uintptr_t fsSetPathForResourceDir;
+    uintptr_t gResourceDirectories;
 };
