@@ -24,4 +24,6 @@ add_library(Hades2EngineInterface STATIC
 
 	"src/HookTable.h"
 	"src/HookTable.cpp"
+
+	"src/HookedLua.h"
 )

@@ -9,6 +9,8 @@
 
 #define GET_HOOK(name, type) (reinterpret_cast<type>(HookTable::Instance().name))
 
+class lua_State;
+
 struct HookTable {
     static HookTable &Instance();
     void Init(const HookTable &parent);
@@ -79,4 +81,7 @@ struct HookTable {
 
     uintptr_t fsSetPathForResourceDir;
     uintptr_t gResourceDirectories;
+
+    uintptr_t luaL_getsubtable;
+    uintptr_t lua_rawseti;
 };
