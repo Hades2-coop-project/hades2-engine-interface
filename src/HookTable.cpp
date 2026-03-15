@@ -82,5 +82,7 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
 
     fsSetPathForResourceDir = GetSymbolAddress("fsSetPathForResourceDir");
     gResourceDirectories = GetSymbolAddress("gResourceDirectories");
+
+    HashGuid_gStringBuffer = GetSymbolAddress("sgg::HashGuid::gStringBuffer");
 }
 #endif //  HADES2_MOD_LOADER

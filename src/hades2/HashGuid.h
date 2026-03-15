@@ -12,7 +12,8 @@ class HashGuid {
     HashGuid(uint32_t id) : mId(id) {};
     uint32_t GetId() const noexcept { return mId; };
     const char *c_str() const {
-        return ((const char* (__fastcall *)(const HashGuid*))HookTable::Instance().HashGuid_c_str)(this);
+        const char** bufferLink = reinterpret_cast<const char**>(HookTable::Instance().HashGuid_gStringBuffer);
+        return &(*bufferLink)[mId];
     }
 
     static uint64_t StringIntern(const char *str, uint64_t size = 0) {

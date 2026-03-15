@@ -48,8 +48,8 @@ struct HookTable {
     uintptr_t EntityManager_Create;
     uintptr_t HashGuid_StringIntern;
     uintptr_t GameDataManager_GetAnimationData;
+    // Missing in release
     uintptr_t HashGuid_c_str;
-
 
     uintptr_t _aligned_malloc;
 
@@ -84,4 +84,5 @@ struct HookTable {
 
     uintptr_t luaL_getsubtable;
     uintptr_t lua_rawseti;
+    uintptr_t HashGuid_gStringBuffer;
 };
