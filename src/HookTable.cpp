@@ -69,7 +69,7 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
         GetSymbolAddress("??0GUIComponentTextBox@sgg@@QEAA@VVector2@Vectormath@@@Z");
 
     vector8x8_push = GetSymbolAddress(
-        "?push_back@?$vector@PEAUPipeline@@Vallocator_forge@eastl@@@eastl@@QEAAXAEBQEAUPipeline@@@Z");
+        "?push_back@?$vector@PEAVGUIComponent@sgg@@Vallocator_forge@eastl@@@eastl@@QEAAX$$QEAPEAVGUIComponent@sgg@@@Z");
 
     GUIComponentReflectionHelper_ReflectComponent_GUIComponentButton =
         GetSymbolAddress("sgg::GUIComponentReflectionHelper::ReflectComponent<sgg::GUIComponentButton *>");
