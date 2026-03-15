@@ -106,7 +106,9 @@ class MenuScreen : public GameScreen, public IGUIComponentContainer {
   protected:
     eastl::vector<sgg::GUIComponent *, eastl::allocator_forge> mPossibleClicks;
     eastl::vector<sgg::GUIComponent *, eastl::allocator_forge> mMouseOverChoices;
+#ifdef HADES2_DEBUG_VERSION
     eastl::vector<Vectormath::Vector3, eastl::allocator_forge> mLastTestLocations;
+#endif
     const Vectormath::Vector2 mZero;
     const sgg::IRectangle mIEmptyRect;
     const sgg::Rectangle mEmptyRect;
@@ -135,5 +137,9 @@ class MenuScreen : public GameScreen, public IGUIComponentContainer {
     sgg::GUIComponent *mSelectedComponent;
     sgg::ScreenData mData;
 };
-static_assert(sizeof(MenuScreen) == 0x2C0, "Size of MenuScreen is not 0x4B0");
+#ifdef HADES2_DEBUG_VERSION
+static_assert(sizeof(MenuScreen) == 0x2C0, "Incorrect sgg::MenuScreen size");
+#else
+static_assert(sizeof(MenuScreen) == 0x2A8, "Incorrect sgg::MenuScreen size");
+#endif
 } // namespace sgg

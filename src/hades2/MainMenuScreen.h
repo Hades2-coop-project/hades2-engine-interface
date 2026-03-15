@@ -50,5 +50,9 @@ class MainMenuScreen : public MenuScreen {
     sgg::GUIComponentButton *mSubscreenOpenButton;
     bool mScreenCovered;
 };
-static_assert(sizeof(MainMenuScreen) == 0x3A8, "Size of MainMenuScreen is not 0x588");
+#ifdef HADES2_DEBUG_VERSION
+static_assert(sizeof(MainMenuScreen) == 0x3A8, "Incorrect sgg::MainMenuScreen size");
+#else
+static_assert(sizeof(MainMenuScreen) == 0x390, "Incorrect sgg::MainMenuScreen size");
+#endif
 } // namespace sgg
