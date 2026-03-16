@@ -21,7 +21,11 @@ void HookTable::Init(HookTable::GetSymbolAddress_t GetSymbolAddress) {
     lua_pcallk = GetSymbolAddress("lua_pcallk");
     luaL_loadbufferx = GetSymbolAddress("luaL_loadbufferx");
     luaL_getsubtable = GetSymbolAddress("luaL_getsubtable");
-    lua_rawseti =  GetSymbolAddress("lua_rawseti");
+    lua_rawseti = GetSymbolAddress("lua_rawseti");
+    lua_setfield = GetSymbolAddress("lua_setfield");
+    lua_pushvalue = GetSymbolAddress("lua_pushvalue");
+    lua_getfield = GetSymbolAddress("lua_getfield");
+
     HandleAssert = GetSymbolAddress("sgg__HandleAssert");
 
     PlayerManager_Instance = GetSymbolAddress("sgg::PlayerManager::Instance");

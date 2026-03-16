@@ -28,4 +28,16 @@ static int luaL_getsubtable(lua_State *L, int idx, const char *fname) {
 static void lua_rawseti(lua_State* L, int idx, int n) {
     GET_HOOK(lua_rawseti, int(__fastcall *)(lua_State *, int, int))(L, idx, n);
 }
+
+static void lua_setfield (lua_State *L, int idx, const char *k) {
+    GET_HOOK(lua_setfield, int(__fastcall *)(lua_State *, int, const char *))(L, idx, k);
+}
+
+static void lua_pushvalue (lua_State *L, int idx){
+    GET_HOOK(lua_pushvalue, int(__fastcall *)(lua_State *, int))(L, idx);
+}
+
+static void lua_getfield (lua_State *L, int idx, const char *k){
+    GET_HOOK(lua_getfield, int(__fastcall *)(lua_State *, int, const char *))(L, idx, k);
+}
 }

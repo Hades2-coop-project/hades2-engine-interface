@@ -85,4 +85,7 @@ struct HookTable {
     uintptr_t luaL_getsubtable;
     uintptr_t lua_rawseti;
     uintptr_t HashGuid_gStringBuffer;
+    uintptr_t lua_setfield;
+    uintptr_t lua_pushvalue;
+    uintptr_t lua_getfield;
 };
