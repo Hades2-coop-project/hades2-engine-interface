@@ -11,7 +11,7 @@ namespace sgg {
 
 class GUIComponentTextBox : public GUIComponentBox {
   private:
-    char pad[0x1A0];
+    char pad[0x188];
 };
-static_assert(sizeof(GUIComponentTextBox) == 0x700, "Incorrect sgg::GUIComponentTextBox size");
+static_assert(sizeof(GUIComponentTextBox) == 0x6D8, "Incorrect sgg::GUIComponentTextBox size");
 } // namespace sgg

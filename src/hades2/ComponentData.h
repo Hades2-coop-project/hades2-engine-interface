@@ -19,5 +19,5 @@ class ComponentData {
 
     ComponentDataDef mDef;
 };
-static_assert(sizeof(ComponentData) == 0x2E8, "Incorrect sgg::ComponentData size");
+static_assert(sizeof(ComponentData) == 0x2D8, "Incorrect sgg::ComponentData size");
 } // namespace sgg

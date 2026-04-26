@@ -18,8 +18,8 @@ class ScreenManager {
     }
 
   private:
-    char pad_0[0x1B0];
+    char pad_0[0x1A0];
 };
 
-static_assert(sizeof(ScreenManager) == 0x1B0, "Incorrect sgg::ScreenManager size");
+static_assert(sizeof(ScreenManager) == 0x1A0, "Incorrect sgg::ScreenManager size");
 } // namespace sgg

@@ -154,10 +154,6 @@ class ComponentDataDef {
     float mMoveSpeed;
     float mMoveEaseIn;
     float mMoveEaseOut;
-    float mShakeSpeed;
-    float mShakeDistance;
-    float mShakeDuration;
-    float mShakeFalloffSpeed;
     float mColorChangeSpeed;
     float mFlashTextWhileSelectedColorChangeSpeed;
     float mWidthChangeSpeed;

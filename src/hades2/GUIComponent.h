@@ -155,5 +155,5 @@ class GUIComponent {
     unsigned __int64 mId;
 };
 
-static_assert(sizeof(GUIComponent) == 0x550, "Incorrect GUIComponent size");
+static_assert(sizeof(GUIComponent) == 0x540, "Incorrect GUIComponent size");
 } // namespace sgg

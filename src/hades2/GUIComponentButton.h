@@ -51,5 +51,5 @@ class GUIComponentButton : public GUIComponent {
     MenuScreen *mOwner;
     bool mFadeSelectionTexture;
 };
-static_assert(sizeof(GUIComponentButton) == 0x5C0, "Incorrect sgg::GUIComponentButton size");
+static_assert(sizeof(GUIComponentButton) == 0x5B0, "Incorrect GUIComponentButton size");
 } // namespace sgg

@@ -16,5 +16,5 @@ class GUIComponentBox : public GUIComponent {
     int mBorderSize;
 };
 
-static_assert(sizeof(GUIComponentBox) == 0x560, "Incorrect GUIComponentBox size");
+static_assert(sizeof(GUIComponentBox) == 0x550, "Incorrect GUIComponentBox size");
 } // namespace sgg
