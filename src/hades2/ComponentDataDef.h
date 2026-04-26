@@ -181,5 +181,5 @@ class ComponentDataDef {
     float mCharacterFadeGreen;
     float mCharacterFadeBlue;
 };
-static_assert(sizeof(ComponentDataDef) == 0x2C8, "Incorrect sgg::ComponentDataDef size");
+static_assert(sizeof(ComponentDataDef) == 0x2B8, "Incorrect sgg::ComponentDataDef size");
 } // namespace sgg
